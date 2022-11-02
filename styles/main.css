@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
+}
+
+#navbar{
+  display: flex;
+  background-color: #003049;
+  color: #EAE287;
+  list-style: none;
+}
+.navbar-link{
+  color: white;
+  padding: 10px;
+}
+
+.navbar-link:hover{
+  color: #FCBF49;
 }
