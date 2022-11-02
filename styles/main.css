@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url("chimera.css");
+
 
 *{
   margin: 0;
@@ -9,12 +12,20 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+
 #navbar{
   display: flex;
-  background-color: #003049;
+  background-color: #BF4F1F;
   color: #EAE287;
   list-style: none;
+  align-items: center;
 }
+
+#nav-img{
+  height: 50px;
+  width: 50px;
+}
+
 .navbar-link{
   color: white;
   padding: 10px;
@@ -22,4 +33,49 @@ body {
 
 .navbar-link:hover{
   color: #FCBF49;
+}
+
+#hero-img{
+  background-image: url("../images/hero-image.jpg");
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hero-content{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  padding: 50px;
+}
+
+#hero-lockup{
+  height: 450px;
+}
+
+.button{
+  background-color: #BF4F1F;
+  color:white;
+  font-size: 24px;
+  padding: 5px 10px;
+}
+
+.paragraph{
+  background-color: #003049;
+  color: white;
+  border-radius: 10px;
+  margin: 15px;
+ padding: 30px 40px;
+ font-size: 18px;
+ display: flex;
+}
+
+#mission{
+  display: flex;
+  background-color: #003049;
+  border-radius: 10px;
 }

@@ -1,0 +1,42 @@
+#chimera-img{
+    background-image: url("../images/Chimera.jpg");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#chimera-content{
+    display: flex;
+    justify-content: center;
+    padding: 250px;
+    font-size: 75px;
+    color: white;
+    font-family: Cinzel;
+    text-align: center;
+
+}
+
+#chimera-text{
+    padding: 50px;
+    
+    width: 100%;
+    font-size: 20px;;
+}
+
+#chimera-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chimera-paragraph{
+    background-color: #003049;
+    color: white;
+    border-radius: 10px;
+    margin: 15px;
+   padding: 30px 40px;
+   font-size: 18px;
+   display: flex;
+  }
