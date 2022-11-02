@@ -1,4 +1,27 @@
+/*
+Export Getter Functions for each body part and custom orders
+OrderBuilder assign foreign keys based on user selection
+Export Setter Functions takes an argument (id) and assigns it as a foreign key to orderBuilder.
+Export addCustomOrders() that:
+  creates variable newOrder that returns orderBuilder
+  creates variable lastIndex that stores database.customOrder.length-1
+  newOrder.id = darabase.customOrder[lastIndex].id+1
+  newOrder.timestamp=Date.now()
+  dateabase.customOrder.push(newOrder)
+  database.orderBuilder = {}
+  dispatch event for stateChanged custom event
+*/
 const database = {
+    customOrders : [
+      {id: 1,
+      headsId: 4,
+      torsosId: 3,
+      legsId: 3,
+      tailsId: 2,
+      armsId: 3,
+      powersId: 1}
+    ],
+    orderBuilder: {},
     heads: [
       { id: 1, name: "Lion", price: 5.0, isCarnivore: true },
       { id: 2, name: "Eagle", price: 7.5, isCarnivore: true },
