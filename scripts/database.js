@@ -1,6 +1,6 @@
 /*
-Export Getter Functions for each body part and custom orders
-OrderBuilder assign foreign keys based on user selection
+xExport Getter Functions for each body part and custom orders
+xcreate an OrderBuilder property to assign foreign keys based on user selection
 Export Setter Functions takes an argument (id) and assigns it as a foreign key to orderBuilder.
 Export addCustomOrders() that:
   creates variable newOrder that returns orderBuilder
@@ -57,4 +57,81 @@ const database = {
       { id: 3, size: "Fire Breath" }
     ]
   };
+
+  /* HEADS */ 
+  export const getHeads = () => { 
+    return database.heads.map(head => ({...head}))
+  }
+
+  export const setHeads = (id) => { 
+    database.orderBuilder.headsId = id
+  }
+
+  /* TORSOS */ 
+  export const getTorsos = () => { 
+    return database.torsos.map(torso => ({...torso}))
+  }
+
+  export const setTorsos = (id) => { 
+    database.orderBuilder.torsosId = id
+  }
+
+  /* LEGS */ 
+  export const getLegs = () => { 
+    return database.legs.map(leg => ({...leg}))
+  }
+
+  export const setLegs = (id) => { 
+    database.orderBuilder.legsId = id
+  }
+
+  /*TAILS*/ 
+  export const getTails = () => { 
+    return database.tails.map(tail => ({...tail}))
+  }
+
+  export const setTails = (id) => { 
+    database.orderBuilder.tailsId = id
+  }
+
+  /* ARMS */ 
+  export const getArms = () => { 
+    return database.arms.map(arm => ({...arm}))
+  }
+
+  export const setArms = (id) => { 
+    database.orderBuilder.armsId = id
+  }
+
+  /* POWERS */ 
+  export const getPowers = () => { 
+    return database.powers.map(power => ({...power}))
+  }
+
+  export const setPowers = (id) => { 
+    database.orderBuilder.powersId = id
+  }
+
+
+  /* ORDERS */ 
+  export const getOrders = () => { 
+    return database.customOrders.map(order => ({...order}))
+  }
+
+  export const addCustomOrder = () => { 
+    const newOrder = {...database.orderBuilder}
+
+    const lastIndex = database.customOrders.length - 1
+    newOrder.id = database.customOrders[lastIndex].id + 1
+
+    newOrder.timestamp = Date.now()
+    
+    database.customOrders.push(newOrder) 
+
+    database.orderBuilder = {}
+
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+
+
+  }
   
