@@ -12,9 +12,14 @@ const renderAllHTML = () => {
 
 renderAllHTML()
 
+
+
 document.addEventListener(
     "stateChanged",
     (e)=>{
         renderAllHTML()
     }
-)
+    )
+    
+    
+    
