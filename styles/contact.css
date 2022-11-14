@@ -1,0 +1,26 @@
+.eCard{
+    background: #003049;
+    color: white;
+    display:flex;
+    border-radius:10px;
+    padding: 20px 40px;
+    margin: 40px;
+    font-size: 25px;
+    justify-content: space-between;
+}
+
+.eCard-content{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+a{
+    color: white;
+    padding: 10px;
+  }
+  
+  a:hover{
+    color: #FCBF49;
+  }

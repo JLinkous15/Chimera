@@ -35,8 +35,17 @@ const database = {
       { id: 1, size: "Lightning Breath" },
       { id: 2, size: "Ice Breath" },
       { id: 3, size: "Fire Breath" }
+    ],
+    contacts:[
+      {id: 1, name:"James Linkous", src:"images/James.jpg", github: "https://github.com/JLinkous15", linkedIn: "www.linkedin.com/in/james-william-linkous"},
+      {id: 2, name:"Lauren Hanson", github: "", linkedIn: ""}
     ]
   };
+
+
+  export const getContacts = () => { 
+    return database.contacts.map(contact => ({...contact}))
+  }
 
   /* HEADS */ 
   export const getHeads = () => { 
