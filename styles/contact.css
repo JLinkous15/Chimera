@@ -1,3 +1,9 @@
+#contactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .eCard{
     background: #003049;
     color: white;
@@ -7,6 +13,8 @@
     margin: 40px;
     font-size: 25px;
     justify-content: space-between;
+    width: 66%;
+    align-content: center;
 }
 
 .eCard-content{
@@ -14,6 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 10px;
 }
 
 a{
@@ -23,4 +32,13 @@ a{
   
   a:hover{
     color: #FCBF49;
+  }
+
+  .eCard-img{
+    width: 250px;
+  }
+
+  .name{
+    font-size: 35px;
+    font-style: bold;
   }
