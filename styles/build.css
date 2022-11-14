@@ -1,0 +1,20 @@
+.selection-child{
+    background-color: #003049;
+    border: solid 2px #BF4F1F;
+    color: white;
+    list-style: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#selections-parent{
+    display: flex;
+}
+
+.choose{
+    color: #BF4F1F;
+    font-style: bold;
+    padding: 5px;
+    font-size: 20px;
+}

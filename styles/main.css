@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url("chimera.css");
+@import url("build.css");
 
 
 *{
@@ -10,6 +11,7 @@
 
 body {
   font-family: "Quicksand", sans-serif;
+
 }
 
 

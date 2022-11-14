@@ -1,20 +1,12 @@
-import { getPowers, setPowers } from "./database.js"
+import { getPowers, setPowers } from "../database.js"
 
 const powers = getPowers() 
 
 export const Powers = () => { 
-    let html = "<ul>" 
-
-    const listItemArray = powers.map(
-        (power) => { 
-            return `<li>
-            <input type="radio" name="power" value="${power.id}"/> ${power.name}</li>`
-        }
-    )
-
-    html += listItemArray.join("")
-    html += "</ul>"
-    return html
+    return `<ul class="selection-child">
+        <p class="choose">Select Your Powers</p>
+        ${powers.map(power => `
+        <li><input type="radio" name="power" value="${power.id}"/> ${power.size}</li>`).join("")}</ul>`
 }
 
 document.addEventListener(

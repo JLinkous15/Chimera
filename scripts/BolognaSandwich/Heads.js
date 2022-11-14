@@ -1,27 +1,23 @@
-import { getHeads, setHeads } from "./database.js"
+import { getHeads, setHeads, setHeadsPrice } from "../database.js"
 
 const heads = getHeads() 
 
 export const Heads = () => { 
-    let html = "<ul>" 
-
-    const listItemArray = heads.map(
-        (head) => { 
-            return `<li>
-            <input type="radio" name="head" value="${head.id}"/> ${head.name}</li>`
-        }
-    )
-
-    html += listItemArray.join("")
-    html += "</ul>"
-    return html
+    return `<ul class="selection-child">
+    <p class="choose">Choose your Head</p>
+            ${heads.map(head => `<li>
+                <input type="radio" name="head" value="${head.id}--${head.price}"/> ${head.name}</li>`).join("")
+            }
+            </ul>`
 }
 
 document.addEventListener(
     "change", 
     (event) => { 
         if (event.target.name === "head") { 
-            setHeads(parseInt(event.target.value))
+            const [headId, headPrice] = event.target.value.split("--")
+            setHeads(parseInt(headId))
+            setHeadsPrice(parseFloat(headPrice))        
         }
     }
 )
