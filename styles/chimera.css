@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
 #chimera-img{
     background-image: url("../images/Chimera.jpg");
     height: 600px;
@@ -17,26 +21,3 @@
     text-align: center;
 
 }
-
-#chimera-text{
-    padding: 50px;
-    
-    width: 100%;
-    font-size: 20px;;
-}
-
-#chimera-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#chimera-paragraph{
-    background-color: #003049;
-    color: white;
-    border-radius: 10px;
-    margin: 15px;
-   padding: 30px 40px;
-   font-size: 18px;
-   display: flex;
-  }

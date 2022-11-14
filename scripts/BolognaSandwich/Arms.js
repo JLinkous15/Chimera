@@ -6,30 +6,26 @@ addEventListener("change",(e)=>{ invokes setter functions})
     if(target === e.target.id){(figure it out)}
 */
 
-import { getArms, setArms } from "./database.js"
+import { getArms, setArms, setArmsPrice } from "../database.js"
 
 const arms = getArms() 
 
 export const Arms = () => { 
-    let html = "<ul>" 
-
-    const listItemArray = arms.map(
-        (arm) => { 
-            return `<li>
-            <input type="radio" name="arm" value="${arm.id}"> ${arm.name}</li>`
-        }
-    )
-
-    html += listItemArray.join("")
-    html += "</ul>"
-    return html
+    return `<ul class="selection-child"> 
+        <p class="choose">Choose your Arms</p>
+        ${arms.map(arm => `<li>
+            <input type="radio" name="arm" value="${arm.id}--${arm.price}"> ${arm.name}</li>`
+        ).join("")}
+        </ul>`
 }
 
 document.addEventListener(
     "change", 
     (event) => { 
         if (event.target.name === "arm") { 
-            setArms(parseInt(event.target.value))
+            const [armId, armPrice] = event.target.value.split("--")
+            setArms(parseInt(armId))
+            setArmsPrice(parseFloat(armPrice))
         }
     }
 )

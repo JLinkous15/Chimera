@@ -1,27 +1,23 @@
-import { getLegs, setLegs } from "./database.js"
+import { getLegs, setLegs, setLegsPrice } from "../database.js"
 
 const legs = getLegs() 
 
 export const Legs = () => { 
-    let html = "<ul>" 
-
-    const listItemArray = legs.map(
-        (leg) => { 
-            return `<li>
-            <input type="radio" name="leg" value="${leg.id}"/> ${leg.name}</li>`
+    return `<ul class="selection-child">
+    <p class="choose">Choose your Legs</p>
+            ${legs.map(leg => `<li>
+            <input type="radio" name="leg" value="${leg.id}--${leg.price}"/> ${leg.name}</li>`).join("")
         }
-    )
-
-    html += listItemArray.join("")
-    html += "</ul>"
-    return html
+   </ul>`
 }
 
 document.addEventListener(
     "change", 
     (event) => { 
         if (event.target.name === "leg") { 
-            setLegs(parseInt(event.target.value))
+            const [legId, legPrice] = event.target.value.split("--")
+            setLegs(parseInt(legId))
+            setLegsPrice(parseFloat(legPrice))
         }
     }
 )
