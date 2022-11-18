@@ -38,7 +38,7 @@ const database = {
     ],
     contacts:[
       {id: 1, name:"James Linkous", src:"images/James.jpg", github: "https://github.com/JLinkous15", linkedIn: "www.linkedin.com/in/james-william-linkous"},
-      {id: 2, name:"Lauren Hanson", github: "", linkedIn: ""}
+      {id: 2, name:"Lauren Hanson", src:"images/Lauren.jpg", github: "https://github.com/lauren-hanson"}
     ]
   };
 
